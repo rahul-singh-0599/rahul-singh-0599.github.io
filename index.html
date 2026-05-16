@@ -1,75 +1,287 @@
-## Hi there 👋
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Singh - SRE & Cloud Infrastructure Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-I'm **Rahul Singh**, a Site Reliability Engineer and Cloud Infrastructure Specialist with expertise in observability, incident management, and Infrastructure-as-Code.
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            padding: 20px;
+        }
 
-### 🔭 I'm currently working on
-- ✅ **SRE at Capgemini** | Client: Coca-Cola Euro Pacific Partners
-- 🚨 On-call SRE for hybrid on-prem and Azure Domain Controller production systems
-- 📊 Prometheus dashboards and Datadog observability for microservice monitoring
-- 🔄 GitHub CI/CD pipelines with Helm-based Kubernetes deployments
-- 🌍 Multi-cloud Infrastructure-as-Code (IaC) using Terraform (AWS, GCP, Azure)
+        .container {
+            max-width: 890px;
+            margin: 0 auto;
+            background-color: #0d1117;
+        }
 
-### 🌱 I'm currently learning
-- [ ] Advanced Kubernetes patterns (AKS, EKS, GKE)
-- [ ] Service mesh technologies (Istio, ArgoCD)
-- [ ] Enterprise security with Microsoft Defender for Identity and SOAR
-- [ ] SailPoint Identity IQ and advanced IAM architectures
+        h1, h2, h3, h4, h5, h6 {
+            color: #c9d1d9;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
 
-### 👯 I'm looking to collaborate on
-- 🤝 Cloud infrastructure automation and DevSecOps projects
-- 📈 Observability and monitoring solutions (Prometheus, Grafana, Datadog)
-- 🐳 Kubernetes and containerized application deployments
-- 🏗️ Infrastructure-as-Code initiatives across multi-cloud environments
-- 🔐 Identity and Access Management (IAM) solutions
+        h1 {
+            font-size: 32px;
+            margin-bottom: 0.3em;
+        }
 
-### 💬 Ask me about
-- 🚀 Site Reliability Engineering (SRE) practices and incident management
-- ☁️ Azure, AWS, and GCP cloud platforms
-- 🎯 Kubernetes orchestration and container technologies
-- 📦 CI/CD pipelines (GitHub Actions, Jenkins, ArgoCD)
-- 🐍 Python automation and scripting
-- 📡 Observability stacks (Prometheus, Datadog, Splunk)
-- 🏗️ Infrastructure-as-Code (Terraform, Ansible)
-- 🔑 Identity and Access Management (Active Directory, Entra ID, Okta)
+        h2 {
+            font-size: 24px;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.3em;
+        }
 
-### 📊 Technical Skills
+        h3 {
+            font-size: 20px;
+        }
 
-| Category | Skills |
-|----------|--------|
-| **Programming** | Python • C++ • Java • SQL • PowerShell • Bash |
-| **☁️ Cloud & Infrastructure** | Microsoft Azure • AWS • GCP • Terraform • Ansible • Docker • Kubernetes |
-| **📈 Monitoring & Observability** | Prometheus • Datadog • Grafana • Splunk |
-| **🔄 DevOps & CI/CD** | GitHub Actions • Jenkins • ArgoCD • Helm |
-| **🔐 Identity & Security** | Active Directory • Microsoft Entra ID • Okta • CyberArk • Microsoft Defender |
-| **🗄️ Databases** | PostgreSQL • MySQL • MongoDB • Cassandra |
+        p {
+            margin-bottom: 16px;
+            color: #c9d1d9;
+        }
 
-### 🏆 Key Achievements
-- 📉 Reduced release execution time by **67%** (1.5 weeks → 0.5 weeks) across 12+ annual production releases
-- ⚡ Decreased infrastructure troubleshooting time by integrating Prometheus dashboards
-- 🤖 Automated alert systems via Power Platform, **eliminating 33% of user-reported outages**
-- 🔧 Built Python automation reducing manual processing time by **80%** for 90,000-user AD/Entra ID environment
-- 🛡️ Deployed enterprise-wide Splunk and Microsoft Defender for Identity across 11 domains
+        strong {
+            color: #c9d1d9;
+            font-weight: 600;
+        }
 
-### 📚 Education & Certifications
-- 🎓 **Bachelor of Technology** | National Institute of Technology, Durgapur (GPA: 8.42/10)
-- 🏅 **Certifications:** 
-  - ✅ GitHub Foundations (GH-900)
-  - ✅ GitHub Actions (GH-200)
-  - ✅ SailPoint Identity IQ Training
+        em {
+            color: #c9d1d9;
+        }
 
-### 🚀 Featured Projects
-- 🔵 **Fully Featured API** – Production-grade REST API (Python/FastAPI, PostgreSQL, JWT auth) with Docker, GitHub Actions CI/CD, and automated testing
-- 🌐 **Auth Health Monitor** – Kubernetes-deployed auth API with Istio service mesh, Prometheus SLO dashboards, DR validation, and end-to-end CI/CD
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
 
-### 📫 How to reach me
-- 📧 **Email:** rahul.singh.0504.r@gmail.com
-- 📱 **Phone:** +91 8637348052
-- 🔗 **LinkedIn:** [Rahul Singh](https://linkedin.com/in/rahul-singh)
-- 📍 **Location:** Kolkata – Open to Relocation
+        a:hover {
+            text-decoration: underline;
+        }
 
-### ⚡ Fun fact
-I love tackling complex infrastructure problems at scale—from managing 90,000-user Active Directory environments to optimizing microservice performance across hybrid cloud platforms! 🚀
+        ul, ol {
+            margin-bottom: 16px;
+            margin-left: 2em;
+        }
 
----
+        li {
+            margin-bottom: 8px;
+            color: #c9d1d9;
+        }
 
-*GitHub Foundations Certified 🏅 | ITIL 📋 | Cloud & DevOps Enthusiast 🔧*
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 16px 0;
+            border-color: #30363d;
+        }
+
+        th, td {
+            border: 1px solid #30363d;
+            padding: 12px 13px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #161b22;
+            color: #c9d1d9;
+            font-weight: 600;
+        }
+
+        td {
+            color: #c9d1d9;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(48, 54, 61, 0.3);
+        }
+
+        hr {
+            background-color: #30363d;
+            border: 0;
+            height: 1px;
+            margin: 24px 0;
+        }
+
+        code {
+            background-color: rgba(110, 118, 129, 0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+            color: #79c0ff;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+
+        .intro {
+            margin-bottom: 24px;
+        }
+
+        .intro p {
+            font-size: 16px;
+            color: #c9d1d9;
+        }
+
+        .emoji {
+            margin-right: 4px;
+        }
+
+        .header-section {
+            margin-bottom: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1><span class="emoji">👋</span>Hi there</h1>
+            <p>I'm <strong>Rahul Singh</strong>, a Site Reliability Engineer and Cloud Infrastructure Specialist with expertise in observability, incident management, and Infrastructure-as-Code.</p>
+        </div>
+
+        <div class="header-section">
+            <h2>🔭 I'm currently working on</h2>
+            <ul>
+                <li><span class="emoji">✅</span><strong>SRE at Capgemini</strong> | Client: Coca-Cola Euro Pacific Partners</li>
+                <li><span class="emoji">🚨</span>On-call SRE for hybrid on-prem and Azure Domain Controller production systems</li>
+                <li><span class="emoji">📊</span>Prometheus dashboards and Datadog observability for microservice monitoring</li>
+                <li><span class="emoji">🔄</span>GitHub CI/CD pipelines with Helm-based Kubernetes deployments</li>
+                <li><span class="emoji">🌍</span>Multi-cloud Infrastructure-as-Code (IaC) using Terraform (AWS, GCP, Azure)</li>
+            </ul>
+        </div>
+
+        <div class="header-section">
+            <h2>🌱 I'm currently learning</h2>
+            <ul>
+                <li>Advanced Kubernetes patterns (AKS, EKS, GKE)</li>
+                <li>Service mesh technologies (Istio, ArgoCD)</li>
+                <li>Enterprise security with Microsoft Defender for Identity and SOAR</li>
+                <li>SailPoint Identity IQ and advanced IAM architectures</li>
+            </ul>
+        </div>
+
+        <div class="header-section">
+            <h2>👯 I'm looking to collaborate on</h2>
+            <ul>
+                <li><span class="emoji">🤝</span>Cloud infrastructure automation and DevSecOps projects</li>
+                <li><span class="emoji">📈</span>Observability and monitoring solutions (Prometheus, Grafana, Datadog)</li>
+                <li><span class="emoji">🐳</span>Kubernetes and containerized application deployments</li>
+                <li><span class="emoji">🏗️</span>Infrastructure-as-Code initiatives across multi-cloud environments</li>
+                <li><span class="emoji">🔐</span>Identity and Access Management (IAM) solutions</li>
+            </ul>
+        </div>
+
+        <div class="header-section">
+            <h2>💬 Ask me about</h2>
+            <ul>
+                <li><span class="emoji">🚀</span>Site Reliability Engineering (SRE) practices and incident management</li>
+                <li><span class="emoji">☁️</span>Azure, AWS, and GCP cloud platforms</li>
+                <li><span class="emoji">🎯</span>Kubernetes orchestration and container technologies</li>
+                <li><span class="emoji">📦</span>CI/CD pipelines (GitHub Actions, Jenkins, ArgoCD)</li>
+                <li><span class="emoji">🐍</span>Python automation and scripting</li>
+                <li><span class="emoji">📡</span>Observability stacks (Prometheus, Datadog, Splunk)</li>
+                <li><span class="emoji">🏗️</span>Infrastructure-as-Code (Terraform, Ansible)</li>
+                <li><span class="emoji">🔑</span>Identity and Access Management (Active Directory, Entra ID, Okta)</li>
+            </ul>
+        </div>
+
+        <div class="header-section">
+            <h2>📊 Technical Skills</h2>
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>Skills</th>
+                </tr>
+                <tr>
+                    <td><strong>Programming</strong></td>
+                    <td>Python • C++ • Java • SQL • PowerShell • Bash</td>
+                </tr>
+                <tr>
+                    <td><strong>☁️ Cloud & Infrastructure</strong></td>
+                    <td>Microsoft Azure • AWS • GCP • Terraform • Ansible • Docker • Kubernetes</td>
+                </tr>
+                <tr>
+                    <td><strong>📈 Monitoring & Observability</strong></td>
+                    <td>Prometheus • Datadog • Grafana • Splunk</td>
+                </tr>
+                <tr>
+                    <td><strong>🔄 DevOps & CI/CD</strong></td>
+                    <td>GitHub Actions • Jenkins • ArgoCD • Helm</td>
+                </tr>
+                <tr>
+                    <td><strong>🔐 Identity & Security</strong></td>
+                    <td>Active Directory • Microsoft Entra ID • Okta • CyberArk • Microsoft Defender</td>
+                </tr>
+                <tr>
+                    <td><strong>🗄️ Databases</strong></td>
+                    <td>PostgreSQL • MySQL • MongoDB • Cassandra</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="header-section">
+            <h2>🏆 Key Achievements</h2>
+            <ul>
+                <li><span class="emoji">📉</span>Reduced release execution time by <strong>67%</strong> (1.5 weeks → 0.5 weeks) across 12+ annual production releases</li>
+                <li><span class="emoji">⚡</span>Decreased infrastructure troubleshooting time by integrating Prometheus dashboards</li>
+                <li><span class="emoji">🤖</span>Automated alert systems via Power Platform, <strong>eliminating 33% of user-reported outages</strong></li>
+                <li><span class="emoji">🔧</span>Built Python automation reducing manual processing time by <strong>80%</strong> for 90,000-user AD/Entra ID environment</li>
+                <li><span class="emoji">🛡️</span>Deployed enterprise-wide Splunk and Microsoft Defender for Identity across 11 domains</li>
+            </ul>
+        </div>
+
+        <div class="header-section">
+            <h2>📚 Education & Certifications</h2>
+            <ul>
+                <li><span class="emoji">🎓</span><strong>Bachelor of Technology</strong> | National Institute of Technology, Durgapur (GPA: 8.42/10)</li>
+                <li><span class="emoji">🏅</span><strong>Certifications:</strong>
+                    <ul style="margin-top: 8px;">
+                        <li><span class="emoji">✅</span>GitHub Foundations (GH-900)</li>
+                        <li><span class="emoji">✅</span>GitHub Actions (GH-200)</li>
+                        <li><span class="emoji">✅</span>SailPoint Identity IQ Training</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header-section">
+            <h2>🚀 Featured Projects</h2>
+            <ul>
+                <li><span class="emoji">🔵</span><strong>Fully Featured API</strong> – Production-grade REST API (Python/FastAPI, PostgreSQL, JWT auth) with Docker, GitHub Actions CI/CD, and automated testing</li>
+                <li><span class="emoji">🌐</span><strong>Auth Health Monitor</strong> – Kubernetes-deployed auth API with Istio service mesh, Prometheus SLO dashboards, DR validation, and end-to-end CI/CD</li>
+            </ul>
+        </div>
+
+        <div class="header-section">
+            <h2>📫 How to reach me</h2>
+            <ul style="list-style: none; margin-left: 0;">
+                <li style="margin-bottom: 12px;"><span class="emoji">📧</span><strong>Email:</strong> rahul.singh.0504.r@gmail.com</li>
+                <li style="margin-bottom: 12px;"><span class="emoji">📱</span><strong>Phone:</strong> +91 8637348052</li>
+                <li style="margin-bottom: 12px;"><span class="emoji">🔗</span><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/rahul-singh">Rahul Singh</a></li>
+                <li style="margin-bottom: 12px;"><span class="emoji">📍</span><strong>Location:</strong> Kolkata – Open to Relocation</li>
+            </ul>
+        </div>
+
+        <div class="header-section">
+            <h2>⚡ Fun fact</h2>
+            <p>I love tackling complex infrastructure problems at scale—from managing 90,000-user Active Directory environments to optimizing microservice performance across hybrid cloud platforms! <span class="emoji">🚀</span></p>
+        </div>
+
+        <hr>
+
+        <p style="text-align: center; font-size: 14px; margin-top: 24px; color: #8b949e;">
+            <em>GitHub Foundations Certified <span class="emoji">🏅</span> | ITIL <span class="emoji">📋</span> | Cloud & DevOps Enthusiast <span class="emoji">🔧</span></em>
+        </p>
+    </div>
+</body>
+</html>
