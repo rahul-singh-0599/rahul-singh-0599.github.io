@@ -169,14 +169,14 @@
             margin-top: 5px;
             margin-right: 12px;
             transform: scale(1.2);
-            accent-color: #238636; /* GitHub Success Green */
+            accent-color: #238636;
             cursor: pointer;
         }
 
         .focus-text {
             margin-left: 28px;
             margin-top: 6px;
-            color: #8b949e; /* Muted text color for dark mode */
+            color: #8b949e;
             font-size: 0.95em;
         }
 
@@ -184,6 +184,38 @@
             display: inline-block;
             margin-bottom: 20px;
             font-size: 14px;
+        }
+
+        /* --- Project Checkpoint Styling --- */
+        .checkpoint {
+            margin-top: 24px;
+            margin-bottom: 32px;
+            padding: 20px;
+            background-color: rgba(88, 166, 255, 0.05);
+            border: 1px solid #388bfd;
+            border-radius: 6px;
+            border-left: 4px solid #58a6ff;
+        }
+
+        .checkpoint h4 {
+            margin-top: 0;
+            color: #79c0ff;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .checkpoint ul {
+            margin-bottom: 0;
+        }
+
+        .checkpoint li {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            margin-bottom: 8px;
+            display: list-item;
+            list-style-type: square;
         }
     </style>
 </head>
@@ -260,6 +292,16 @@
                     <span class="focus-text"><em>Focus:</em> The upper network layers (HTTP/2, HTTP/3, TLS, TCP/UDP mechanics).</span>
                 </li>
             </ul>
+
+            <div class="checkpoint">
+                <h4><span class="emoji">🛠️</span>Project Checkpoint 1: The Local OS Analyzer</h4>
+                <p><strong>The Goal:</strong> Stop reading theory. Open the official documentation for Python or Go and build a functional CLI tool.</p>
+                <ul>
+                    <li><strong>Task:</strong> Write a CLI script (in Go or Python) that ingests a mock 1GB Nginx log file.</li>
+                    <li><strong>Implementation:</strong> Do not use high-level libraries. Read the file as a stream (to manage memory). Parse the IP addresses and HTTP status codes using regex or string splitting. Output a JSON report of the top 10 IPs generating <code>500 Internal Server Errors</code>.</li>
+                    <li><strong>Why:</strong> This tests File I/O, memory management, JSON marshaling, and mimics real-world incident response parsing.</li>
+                </ul>
+            </div>
         </div>
 
         <div class="header-section">
@@ -284,7 +326,7 @@
                 </li>
             </ul>
 
-            <h3>Infrastructure as Code (IaC) & Deployment</h3>
+            <h3>Infrastructure as Code & Cloud-Native Development</h3>
             <ul class="task-list">
                 <li>
                     <label class="task-label">
@@ -292,6 +334,13 @@
                         <span><strong>Terraform: Up & Running, 3rd Edition</strong> (Yevgeniy Brikman)</span>
                     </label>
                     <span class="focus-text"><em>Focus:</em> Managing remote state, module structure, and integrating IaC into CI/CD pipelines.</span>
+                </li>
+                <li>
+                    <label class="task-label">
+                        <input type="checkbox">
+                        <span><strong>Cloud Native Go</strong> (Matthew Titmus)</span>
+                    </label>
+                    <span class="focus-text"><em>Focus:</em> Building reliable Go microservices that expect the network to fail and the Kubernetes pod to die.</span>
                 </li>
                 <li>
                     <label class="task-label">
@@ -308,6 +357,16 @@
                     <span class="focus-text"><em>Focus:</em> Measuring pipeline success using DORA metrics.</span>
                 </li>
             </ul>
+
+            <div class="checkpoint">
+                <h4><span class="emoji">🛠️</span>Project Checkpoint 2: The Containerized Pipeline</h4>
+                <p><strong>The Goal:</strong> Wrap your Phase 1 application in infrastructure and automate its delivery via official tool docs.</p>
+                <ul>
+                    <li><strong>Task:</strong> Convert your Phase 1 CLI tool into a simple HTTP API (using standard library routing).</li>
+                    <li><strong>Implementation:</strong> Write a <code>Dockerfile</code> to containerize it. Install <strong>Minikube</strong> or <strong>K3s</strong> locally. Write the Kubernetes <code>Deployment</code> and <code>Service</code> YAML manifests to run 3 replicas of your API. Finally, use Terraform to provision a mock local resource (like a local file or a Docker container) to practice <code>terraform plan</code> and <code>apply</code>.</li>
+                    <li><strong>Why:</strong> You are physically executing the container lifecycle and orchestrating network traffic to your own application.</li>
+                </ul>
+            </div>
         </div>
 
         <div class="header-section">
@@ -322,6 +381,13 @@
                         <span><strong>Architecture Patterns with Python</strong> (Harry Percival & Bob Gregory)</span>
                     </label>
                     <span class="focus-text"><em>Focus:</em> Decoupling business logic from frameworks (Clean Architecture, Dependency Injection).</span>
+                </li>
+                <li>
+                    <label class="task-label">
+                        <input type="checkbox">
+                        <span><strong>Microservices Patterns</strong> (Chris Richardson)</span>
+                    </label>
+                    <span class="focus-text"><em>Focus:</em> Application-layer implementation of distributed transactions (Sagas), Event Sourcing, and API Gateways.</span>
                 </li>
                 <li>
                     <label class="task-label">
@@ -346,7 +412,7 @@
                         <input type="checkbox">
                         <span><strong>Designing Data-Intensive Applications (DDIA)</strong> (Martin Kleppmann)</span>
                     </label>
-                    <span class="focus-text"><em>Focus:</em> The ultimate bible. ACID vs. BASE, leader/follower replication, partitioning/sharding, and message brokers (Kafka).</span>
+                    <span class="focus-text"><em>Focus:</em> ACID vs. BASE, leader/follower replication, partitioning/sharding, and message brokers.</span>
                 </li>
                 <li>
                     <label class="task-label">
@@ -364,23 +430,15 @@
                 </li>
             </ul>
 
-            <h3>Cloud Design Patterns</h3>
-            <ul class="task-list">
-                <li>
-                    <label class="task-label">
-                        <input type="checkbox">
-                        <span><strong>Resource:</strong> <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/" target="_blank">Azure Architecture Center: Cloud Design Patterns</a></span>
-                    </label>
-                    <span class="focus-text"><em>Focus:</em> Resilience patterns (Circuit Breaker, Bulkhead, CQRS).</span>
-                </li>
-                <li>
-                    <label class="task-label">
-                        <input type="checkbox">
-                        <span><strong>Resource:</strong> <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-modernizing-applications/cloud-design-patterns.html" target="_blank">AWS Prescriptive Guidance: Cloud Design Patterns</a></span>
-                    </label>
-                    <span class="focus-text"><em>Focus:</em> Distributed transactions (Saga Pattern) and migration strategies (Strangler Fig / Anti-Corruption Layer).</span>
-                </li>
-            </ul>
+            <div class="checkpoint">
+                <h4><span class="emoji">🛠️</span>Project Checkpoint 3: The Distributed State</h4>
+                <p><strong>The Goal:</strong> Implement stateful persistence and caching strategies reading official DB documentation.</p>
+                <ul>
+                    <li><strong>Task:</strong> Spin up PostgreSQL and Redis instances via Docker Compose alongside your local Kubernetes cluster.</li>
+                    <li><strong>Implementation:</strong> Expand your API to accept POST requests that write data to PostgreSQL. Implement a Read-Through cache using Redis. Consult the official PostgreSQL docs to create an optimal B-Tree index for your query, and the Redis docs to set a Time-To-Live (TTL) eviction policy.</li>
+                    <li><strong>Why:</strong> Theory becomes reality when you have to debug a connection pool exhaustion issue or a cache miss.</li>
+                </ul>
+            </div>
         </div>
 
         <div class="header-section">
@@ -424,11 +482,21 @@
                 <li>
                     <label class="task-label">
                         <input type="checkbox">
-                        <span><strong>Resource:</strong> Official Anthropic (Claude Code) & LangChain/LlamaIndex Documentation</span>
+                        <span><strong>Resource:</strong> Official Anthropic (Claude Code) & LangChain/LlamaIndex Docs</span>
                     </label>
-                    <span class="focus-text"><em>Focus:</em> Vibe Coding methodology, giving LLMs access to terminal tools, and building internal operational agents.</span>
+                    <span class="focus-text"><em>Focus:</em> Vibe Coding methodology, terminal tool access, and operational agents.</span>
                 </li>
             </ul>
+
+            <div class="checkpoint">
+                <h4><span class="emoji">🛠️</span>Project Checkpoint 4: The Secure AI Observer</h4>
+                <p><strong>The Goal:</strong> Protect the cluster and build an autonomous observer using framework docs.</p>
+                <ul>
+                    <li><strong>Task:</strong> Deploy an API Gateway (like Nginx or Traefik) in front of your cluster and configure a strict Rate Limiter (e.g., 10 req/sec).</li>
+                    <li><strong>Implementation:</strong> Write a separate Python script utilizing the official Anthropic or OpenAI SDK. Give the AI "Tool Calling" access to query your API Gateway. Instruct the AI to monitor the API and generate an alert if it receives a <code>429 Too Many Requests</code> status code.</li>
+                    <li><strong>Why:</strong> You are actively bridging network security (rate limiting) with modern AI operations (agentic tool execution).</li>
+                </ul>
+            </div>
         </div>
 
         <div class="header-section">
@@ -484,6 +552,16 @@
                     <span class="focus-text"><em>Focus:</em> The modern replacement for UML. Drawing clear Context, Container, Component, and Code diagrams on a whiteboard.</span>
                 </li>
             </ul>
+
+            <div class="checkpoint">
+                <h4><span class="emoji">🛠️</span>Project Checkpoint 5: The Capstone Validation</h4>
+                <p><strong>The Goal:</strong> Prove the system works under load and document it like a Senior Architect.</p>
+                <ul>
+                    <li><strong>Task:</strong> Diagram the entire local architecture you just built using the C4 Model standard.</li>
+                    <li><strong>Implementation:</strong> Read the official docs for <strong>k6</strong> (load testing tool). Write a JavaScript/k6 script to hammer your API Gateway with thousands of requests. Monitor your system to see at what point the Kubernetes pods throttle or the PostgreSQL database connections max out. Write a mock "Architecture Decision Record" (ADR) proposing a solution to the bottleneck you found.</li>
+                    <li><strong>Why:</strong> This is exactly what you will do on the job and exactly what you will discuss in a Senior level system design interview.</li>
+                </ul>
+            </div>
         </div>
 
         <hr>
