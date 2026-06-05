@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRE & IAM Networking Mastery Roadmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 890px;
+            margin: 0 auto;
+            background-color: #0d1117;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #c9d1d9;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 0.3em;
+        }
+
+        h2 {
+            font-size: 24px;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.3em;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #c9d1d9;
+        }
+
+        strong {
+            color: #c9d1d9;
+            font-weight: 600;
+        }
+
+        em {
+            color: #c9d1d9;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul, ol {
+            margin-bottom: 16px;
+            margin-left: 2em;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #c9d1d9;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 16px 0;
+            border-color: #30363d;
+        }
+
+        th, td {
+            border: 1px solid #30363d;
+            padding: 12px 13px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #161b22;
+            color: #c9d1d9;
+            font-weight: 600;
+        }
+
+        td {
+            color: #c9d1d9;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(48, 54, 61, 0.3);
+        }
+
+        hr {
+            background-color: #30363d;
+            border: 0;
+            height: 1px;
+            margin: 24px 0;
+        }
+
+        code {
+            background-color: rgba(110, 118, 129, 0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+            color: #79c0ff;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+
+        .intro {
+            margin-bottom: 24px;
+        }
+
+        .intro p {
+            font-size: 16px;
+            color: #c9d1d9;
+        }
+
+        .emoji {
+            margin-right: 4px;
+        }
+
+        .header-section {
+            margin-bottom: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1><span class="emoji">🗺️</span>The 8/10 SRE & IAM Networking Roadmap</h1>
+            <p>A top-down execution plan bridging the gap from Identity and Access Management (Application Layer) to Platform Engineering and Site Reliability (Cloud Data Center Fabric). Building this foundation ensures no operational gaps in multi-cloud infrastructure environments.</p>
+        </div>
+
+        <div class="header-section">
+            <h2><span class="emoji">1️⃣</span> Phase 1: The Protocol Foundation</h2>
+            <p><em>The baseline for both IAM and SRE.</em> You must understand the rules of the road before you can optimize the traffic. This phase starts at the application layer—mapping perfectly to IAM engineering—and works its way down the stack.</p>
+            <ul>
+                <li><span class="emoji">📚</span><strong>Books:</strong> <em>Computer Networking: A Top-Down Approach (Kurose & Ross)</em></li>
+                <li><span class="emoji">🔐</span><strong>IAM Focus:</strong> Master DNS (A records, TXT, SRV), HTTP, and basic IP routing.</li>
+                <li><span class="emoji">⚙️</span><strong>SRE Focus:</strong> Master UDP vs. TCP mechanics, the OSI model, and how routers physically queue and drop packets.</li>
+                <li><span class="emoji">⏭️</span><strong>What to Skip:</strong> Wireless and multimedia networking chapters.</li>
+            </ul>
+        </div>
+
+        <div class="header-section">
+            <h2><span class="emoji">2️⃣</span> Phase 2: The Application Edge & Security</h2>
+            <p><em>Mastering the "Front Door".</em> This phase covers the exact intersection of IAM and Web Performance. This is where you learn how data securely traverses the public internet to reach the load balancers.</p>
+            <ul>
+                <li><span class="emoji">📚</span><strong>Books:</strong> <em>High-Performance Browser Networking (Ilya Grigorik)</em>, <em>Web Security for Developers (Malcolm McDonald)</em>, <em>Bulletproof TLS and PKI (Ivan Ristić)</em></li>
+                <li><span class="emoji">🔐</span><strong>IAM Focus:</strong> HTTP redirects, cookie flags (Secure/HttpOnly), CORS, and the TLS handshake.</li>
+                <li><span class="emoji">⚙️</span><strong>SRE Focus:</strong> TCP slow-start tuning, HTTP/2 multiplexing, HTTP/3 (QUIC), and lowering connection latency.</li>
+            </ul>
+        </div>
+
+        <div class="header-section">
+            <h2><span class="emoji">3️⃣</span> Phase 3: Wire-Level Troubleshooting</h2>
+            <p><em>Command Line Observability.</em> An SRE never guesses; they prove. When an application owner says "the network is down" or an IAM login fails silently, you need to look at the raw data on the wire.</p>
+            <ul>
+                <li><span class="emoji">📚</span><strong>Books:</strong> <em>Practical Packet Analysis (Chris Sanders)</em></li>
+                <li><span class="emoji">🤝</span><strong>IAM/SRE Overlap:</strong> Learn to use Wireshark and <code>tcpdump</code> to capture traffic on a server. You will learn how to read a three-way TCP handshake, spot packet retransmissions, and prove whether a firewall is blocking a port or if an application is returning an error.</li>
+            </ul>
+        </div>
+
+        <div class="header-section">
+            <h2><span class="emoji">4️⃣</span> Phase 4: Cloud Data Center Fabric</h2>
+            <p><em>Behind the Load Balancer.</em> Leaving the IAM world entirely and entering pure Platform Engineering. This phase teaches you how massive server clusters route traffic internally across public cloud architectures.</p>
+            <ul>
+                <li><span class="emoji">📚</span><strong>Books:</strong> <em>Cloud Native Data Center Networking (Dinesh G. Dutt)</em></li>
+                <li><span class="emoji">⚙️</span><strong>SRE Focus:</strong> Abandon legacy enterprise networking to learn the protocols powering Azure, AWS, and GCP data centers. Master Spine-Leaf topology, BGP (Border Gateway Protocol), and VXLAN.</li>
+            </ul>
+        </div>
+
+        <div class="header-section">
+            <h2><span class="emoji">5️⃣</span> Phase 5: Kubernetes & eBPF Networking</h2>
+            <p><em>The Modern Microservice Engine.</em> The final boss of SRE networking. Once traffic enters a Kubernetes cluster, standard IP routing rules change. You must understand how ephemeral containers talk to each other securely.</p>
+            <ul>
+                <li><span class="emoji">📚</span><strong>Books:</strong> <em>Networking and Kubernetes (James Strong & Vallery Lancey)</em>, <em>Learning eBPF (Liz Rice)</em></li>
+                <li><span class="emoji">⚙️</span><strong>SRE Focus:</strong> Master Container Network Interfaces (CNI), Ingress Controllers, and Service Meshes (like Istio). Understand how the Linux kernel is dynamically programmed (eBPF) to route network traffic without legacy <code>iptables</code>.</li>
+            </ul>
+        </div>
+
+        <div class="header-section">
+            <h2>📊 The Master Networking Reference Matrix</h2>
+            <table>
+                <tr>
+                    <th>Book</th>
+                    <th>Target Role</th>
+                    <th>The 8/10 Core Focus</th>
+                </tr>
+                <tr>
+                    <td><strong>Computer Networking: A Top-Down Approach</strong></td>
+                    <td>Both (IAM & SRE)</td>
+                    <td>The ultimate foundation. DNS, TCP/UDP, IP routing, and the OSI model from top to bottom.</td>
+                </tr>
+                <tr>
+                    <td><strong>High-Performance Browser Networking</strong></td>
+                    <td>Both (IAM & SRE)</td>
+                    <td>TCP congestion tuning, HTTP/2/3, latency, and optimizing web transport.</td>
+                </tr>
+                <tr>
+                    <td><strong>Web Security for Developers</strong></td>
+                    <td>Both (IAM & SRE)</td>
+                    <td>HTTP headers, cookies, session hijacking, XSS/CSRF. <em>(Critical for IAM)</em>.</td>
+                </tr>
+                <tr>
+                    <td><strong>Bulletproof TLS and PKI</strong></td>
+                    <td>Both (IAM & SRE)</td>
+                    <td>TLS handshakes, PKI architecture, certificate chains, and OpenSSL.</td>
+                </tr>
+                <tr>
+                    <td><strong>Practical Packet Analysis</strong></td>
+                    <td>Both (IAM & SRE)</td>
+                    <td>Wire-level troubleshooting, Wireshark, <code>tcpdump</code>, and reading raw packet headers.</td>
+                </tr>
+                <tr>
+                    <td><strong>Cloud Native Data Center Networking</strong></td>
+                    <td>SRE / Platform</td>
+                    <td>Spine-leaf data center architecture, BGP, and cloud routing fabric.</td>
+                </tr>
+                <tr>
+                    <td><strong>Networking and Kubernetes</strong> & <strong>Learning eBPF</strong></td>
+                    <td>SRE / Platform</td>
+                    <td>CNI, Ingress, Service Meshes, and routing traffic to dynamic microservices.</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <p style="text-align: center; font-size: 14px; margin-top: 24px; color: #8b949e;">
+            <em>Generated for continuous learning in Site Reliability Engineering and Identity Architectures <span class="emoji">🚀</span></em>
+        </p>
+    </div>
+</body>
+</html>
